@@ -528,6 +528,13 @@
                                     <segue destination="RX2-s7-FaX" kind="embed" id="e76-hl-GaB"/>
                                 </connections>
                             </containerView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Reminder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Obc-zH-Nls">
+                                <rect key="frame" x="61" y="457" width="255" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -551,6 +558,7 @@
                         <viewLayoutGuide key="safeArea" id="hxK-Jl-o3X"/>
                     </view>
                     <connections>
+                        <outlet property="addReminder" destination="Obc-zH-Nls" id="sef-Kh-99h"/>
                         <outlet property="descriptionTxtFeild" destination="4wL-mK-o9x" id="Sia-Mo-CKq"/>
                         <outlet property="textfeildTxt" destination="iqB-l3-2yc" id="adq-nz-CPS"/>
                         <outlet property="topMenuConstraint" destination="kWb-YB-5Um" id="5Yi-du-Yfm"/>

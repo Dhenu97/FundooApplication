@@ -51,7 +51,9 @@ extension SlideViewTableController:  UICollectionViewDelegate , UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let colorCell:colorViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionVC", for: indexPath) as! colorViewCell
+        
         colorCell.backgroundColor = colorData[indexPath.row]
+        
        // colorCell.backgroundColor = UIColor.init(hex:EditViewController[indexPath.row] )
 
         return colorCell
