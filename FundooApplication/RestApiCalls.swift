@@ -12,11 +12,9 @@ import UIKit
 class RestApiCalls {
     
     
-    func loginWithRestApi(email:String , password:String){
+    func loginWithRestApi(logindict:[String:String]){
         
         print("loading.. data")
-        
-        let loginCre = ["email": email,"password": password]
         
         guard let url = URL(string:  "http://34.213.106.173/api/user/login") else { return }
         var request = URLRequest(url: url)
@@ -24,27 +22,25 @@ class RestApiCalls {
         request.httpMethod = "POST"
         
         let encoder = JSONEncoder()
-        request.httpBody = try? encoder.encode(loginCre)
-        print(loginCre)
-        
+        request.httpBody = try? encoder.encode(logindict)
         let session  = URLSession.shared
         
         session.dataTask(with: request) { (data, httpresponse, error) in
-            
+            var json = [String: AnyObject]()
             if let jsonData = data {
                 do{
-                    let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as! [String: Any]
+                    json = try JSONSerialization.jsonObject(with: jsonData, options: []) as! [String : AnyObject]
                     print(json)
                 }
                     
                 catch{
                     print(error)
                 }
-            }
+            };
             let response = httpresponse as! HTTPURLResponse
             print(response.statusCode)
             print("notification Posted")
-            NotificationCenter.default.post(name: NSNotification.Name("UserInfo"), object: nil, userInfo: ["response":response,"data":data!])
+            NotificationCenter.default.post(name: NSNotification.Name("UserInfo"), object: nil, userInfo: ["response":response,"data":json])
             let httpresponse = response.statusCode
             if httpresponse == 200 {
                 print("sucess")
@@ -58,7 +54,7 @@ class RestApiCalls {
         
         print("printing server data")
         
-        guard let url = URL(string:"http://34.213.106.173/api/user/5d2ef48cf1701d00404fa627") else { return }
+        guard let url = URL(string:"http://34.213.106.173/api/user/") else { return }
         var request = URLRequest(url: url)
         request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
@@ -74,10 +70,11 @@ class RestApiCalls {
             do {
                 if let convertedJsonIntoDict = try JSONSerialization.jsonObject(with: data!, options: []) as? NSDictionary {
                     
+                    
                     print(convertedJsonIntoDict)
                     
                     let emailid = convertedJsonIntoDict["email"] as? String
-                    print(emailid!)
+
                     
                 }
             } catch let error as NSError {

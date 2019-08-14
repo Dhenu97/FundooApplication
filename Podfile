@@ -6,9 +6,9 @@ target 'FundooApplication' do
   use_frameworks!
 
   # Pods for FundooApplication
-pod 'DTGradientButton'
-
-
+pod "SJSwiftSideMenuController"
+pod 'KeychainAccess'
+pod 'MaterialComponents'
 
 
   target 'FundooApplicationTests' do

@@ -10,14 +10,13 @@ import UIKit
 
 class SlideViewTableController: UITableViewController {
     
-    var arrname = ["delete","Reminder"]
+    var arrname = ["delete"]
     
-    var colorData:[UIColor] = [#colorLiteral(red: 0.831372549, green: 0.1333333333, blue: 0.9411764706, alpha: 1) , #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1) , #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1) , #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1) , #colorLiteral(red: 0.05098039216, green: 0.8196078431, blue: 0.05490196078, alpha: 1) , #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1) , #colorLiteral(red: 1, green: 0.03529411765, blue: 0.2901960784, alpha: 1) , #colorLiteral(red: 0.5568627451, green: 0.6196078431, blue: 0.968627451, alpha: 1)]
+    var colorData:[UIColor] = [#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1) , #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1) , #colorLiteral(red: 0.968627451, green: 0.9333333333, blue: 0.1568627451, alpha: 1) , #colorLiteral(red: 0.5191938212, green: 0.9764705896, blue: 0.9438369489, alpha: 1) , #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1) , #colorLiteral(red: 0.6745098039, green: 0.568627451, blue: 0.968627451, alpha: 1) , #colorLiteral(red: 0.9098039216, green: 0.568627451, blue: 0.8549019608, alpha: 1) , #colorLiteral(red: 0.8549019608, green: 0.8039215686, blue: 0.8, alpha: 1)]
     
-    var color:String = "FFFFFF"
-
-
-
+    var color:String = "#FFFFFF"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,37 +24,39 @@ class SlideViewTableController: UITableViewController {
     
     @IBOutlet weak var colorCollectionView: UICollectionView!
     
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return arrname.count
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrname.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:EditNavigationCell = tableView.dequeueReusableCell(withIdentifier:"editVC",for:indexPath) as! EditNavigationCell
+        let cell:TableEditNavigationCell = tableView.dequeueReusableCell(withIdentifier:"TableEditVC",for:indexPath) as! TableEditNavigationCell
         cell.nameLbl.text = arrname[indexPath.row]
         return cell
     }
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            NotificationCenter.default.post(name: NSNotification.Name("deleteNotes"), object: nil)
+        print("posting trash notes")
+    }
 }
 
 extension SlideViewTableController:  UICollectionViewDelegate , UICollectionViewDataSource {
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return colorData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
         let colorCell:colorViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionVC", for: indexPath) as! colorViewCell
         
         colorCell.backgroundColor = colorData[indexPath.row]
         
-       // colorCell.backgroundColor = UIColor.init(hex:EditViewController[indexPath.row] )
-
         return colorCell
     }
     
@@ -80,26 +81,31 @@ extension SlideViewTableController:  UICollectionViewDelegate , UICollectionView
             color = enumcolors.violet.rawValue
             
             
+            
         default:color = enumcolors.defaultvalue.rawValue
             
         }
+        NotificationCenter.default.post(name: NSNotification.Name("ColorData"), object: nil, userInfo: ["color":color])
+        print("color data loading")
         view.backgroundColor = UIColor.init(hex: color)
+        tableView.backgroundColor = UIColor.init(hex: color)
         print("background")
     }
+    
 }
 
 extension SlideViewTableController {
     
     enum enumcolors:String {
         case defaultvalue = "FFFFFF"
-        case pink = "D422F0"
-        case green = "579F2B"
-        case skyBlue = "42C1F7"
-        case yellow = "F5B433"
-        case lightGreen = "0DD10E"
-        case hash = "999999"
-        case red = "FF094A"
-        case violet = "8E9EF7"
+        case pink = "F07F5A"
+        case green = "F5B433"
+        case skyBlue = "F7EE28"
+        case yellow = "84F9F1"
+        case lightGreen = "95D26B"
+        case hash = "AC91F7"
+        case red = "E891DA"
+        case violet = "DACDCC"
         
         
     }

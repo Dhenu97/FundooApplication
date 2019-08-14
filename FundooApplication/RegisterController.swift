@@ -13,9 +13,6 @@ import SQLite3
 class RegisterController: UIViewController {
     
     var stmt: OpaquePointer?
-
-    
-    var validdata = FunctionValidation()
     
     var data = SqliteController()
     
@@ -33,22 +30,21 @@ class RegisterController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-       data.openDB()
+        
+        data.openDB()
         data.createDBTable()
     }
     
     @IBAction func registerbtn(_ sender: UIButton) {
-          let user = modeldata.init(id: 2, name: nametxtfield.text, email: emailtxtfield.text, mobilenumber: mobilenumbertxtfield.text)
+        let user = modeldata.init(id: 2, name: nametxtfield.text, email: emailtxtfield.text, mobilenumber: mobilenumbertxtfield.text)
         validation(user: user)
         data.insert(data: user)
         print(user)
-
-        postServerData(user: user)
+        
+        registeringFromServer(user: user)
         self.navigationController?.popViewController(animated: true)
-
+        
     }
-    
     
     func validation(user : modeldata){
         
@@ -93,7 +89,7 @@ class RegisterController: UIViewController {
     
     func registerServer(users:modeldata){
         guard let url = URL(string: "http://34.213.106.173/api/user/userSignUp"
-) else { return }
+            ) else { return }
         let session = URLSession.shared
         session.dataTask(with: url) { (data, response, error) in
             if let response = response {
@@ -109,15 +105,15 @@ class RegisterController: UIViewController {
                 }
             }
             
-        }.resume()
+            }.resume()
     }
     
-
     
-    func postServerData(user:modeldata){
+    
+    func registeringFromServer(user:modeldata){
         
         let parameters = ["firstName": nametxtfield.text! ,
-                          "lastName": "d",
+                          "lastName": "rithu",
                           "username": nametxtfield.text!,
                           "phoneNumber":mobilenumbertxtfield.text!,
                           "role": "user",
@@ -133,7 +129,7 @@ class RegisterController: UIViewController {
         
         do{
             let encoder = JSONEncoder()
-        request.httpBody = try! encoder.encode(parameters)
+            request.httpBody = try! encoder.encode(parameters)
             let session  = URLSession.shared
             
             session.dataTask(with: request) { (data, response, error) in
@@ -152,6 +148,7 @@ class RegisterController: UIViewController {
                 
                 }.resume()
             
-}
-}
+        }
+    }
+    
 }

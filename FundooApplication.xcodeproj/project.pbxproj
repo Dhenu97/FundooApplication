@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A0055C722D9B2D1003056F8 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0055C622D9B2D1003056F8 /* MenuTableViewCell.swift */; };
 		0A0055C922DA12F5003056F8 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0055C822DA12F5003056F8 /* EditViewController.swift */; };
-		0A185A8022DDF9B00072740A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A185A7E22DDF9B00072740A /* CollectionViewCell.swift */; };
-		0A185A8122DDF9B00072740A /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A185A7F22DDF9B00072740A /* CollectionViewCell.xib */; };
+		0A0330F322EB10680058CF16 /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0330F222EB10680058CF16 /* CollectionViewFlowLayout.swift */; };
+		0A15A4AE22EDAF8700AD65D5 /* HttpConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A15A4AD22EDAF8700AD65D5 /* HttpConnections.swift */; };
 		0A185A8322DDFC2E0072740A /* ExtensionFileForUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A185A8222DDFC2E0072740A /* ExtensionFileForUIView.swift */; };
+		0A199F7723012B2B00E4C488 /* FundooApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A199F7523012B2B00E4C488 /* FundooApplication.xcdatamodeld */; };
+		0A2D1BB922FC459B008EE19E /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D1BB822FC459B008EE19E /* CoreDataHelper.swift */; };
 		0A4A67EC22D623EB001FE8F0 /* SqliteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4A67EB22D623EB001FE8F0 /* SqliteController.swift */; };
 		0A722AC722DC4D9F00E2F9B0 /* ButtonColorFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A722AC622DC4D9F00E2F9B0 /* ButtonColorFile.swift */; };
 		0A825E3522D719D30068AC12 /* modeldata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A825E3422D719D30068AC12 /* modeldata.swift */; };
@@ -19,11 +20,21 @@
 		0AAAC8E322D4BDFB00D73439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAAC8E122D4BDFB00D73439 /* Main.storyboard */; };
 		0AAAC8E822D4BE0D00D73439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAAC8E622D4BE0D00D73439 /* LaunchScreen.storyboard */; };
 		0AAAC8F322D4BE0D00D73439 /* FundooApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAAC8F222D4BE0D00D73439 /* FundooApplicationTests.swift */; };
-		0ABB172922DB24990035D1F7 /* EditNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB172822DB24990035D1F7 /* EditNavigationCell.swift */; };
+		0ABB172922DB24990035D1F7 /* TableEditNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB172822DB24990035D1F7 /* TableEditNavigationCell.swift */; };
 		0AC4506F22E1E3C900F6FFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC4506E22E1E3C900F6FFDC /* Assets.xcassets */; };
 		0AC4507222E1E9DD00F6FFDC /* AddNotesApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4507122E1E9DD00F6FFDC /* AddNotesApiCall.swift */; };
-		0AC4507422E1EE6200F6FFDC /* AddNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4507322E1EE6200F6FFDC /* AddNotes.swift */; };
+		0AC4507422E1EE6200F6FFDC /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4507322E1EE6200F6FFDC /* NoteModel.swift */; };
+		0AD9508E22EC20DD005F4864 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9508D22EC20DD005F4864 /* SideMenuCell.swift */; };
+		0AD9509022EC2254005F4864 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9508F22EC2254005F4864 /* SideMenuController.swift */; };
+		0AD9509422EC2431005F4864 /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9509322EC2431005F4864 /* MenuHelper.swift */; };
+		0AD9509622EC5582005F4864 /* UrlFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9509522EC5582005F4864 /* UrlFile.swift */; };
 		0AE1318F22E090D4006BBF84 /* RestApiCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1318E22E090D4006BBF84 /* RestApiCalls.swift */; };
+		0AE5ACD522FAA29600574854 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5ACD422FAA29600574854 /* UserDefaultManager.swift */; };
+		0AE5ACD822FACB3B00574854 /* NotesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5ACD722FACB3B00574854 /* NotesDataSource.swift */; };
+		0AE5ACDA22FACD6A00574854 /* AnotherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5ACD922FACD6A00574854 /* AnotherDataSource.swift */; };
+		0AE5ACE022FB115900574854 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5ACDF22FB115900574854 /* GoogleService-Info.plist */; };
+		0AE5ACE222FB37ED00574854 /* SignOutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5ACE122FB37ED00574854 /* SignOutController.swift */; };
+		0AE5ACE422FB3C6200574854 /* UserModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5ACE322FB3C6200574854 /* UserModelClass.swift */; };
 		0AEEACF822E2E83300CC32C2 /* SlideViewTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEACF722E2E83300CC32C2 /* SlideViewTableController.swift */; };
 		0AEEACFA22E2EF5100CC32C2 /* colorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEEACF922E2EF5100CC32C2 /* colorViewCell.swift */; };
 		0AF394DD22D5B6A20014ACAF /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF394DC22D5B6A20014ACAF /* LoginController.swift */; };
@@ -31,6 +42,13 @@
 		0AF394E122D5B8110014ACAF /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF394E022D5B8110014ACAF /* PreviewController.swift */; };
 		0AF394E322D5C54D0014ACAF /* validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF394E222D5C54D0014ACAF /* validation.swift */; };
 		0AF394E522D5D00D0014ACAF /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF394E422D5D00D0014ACAF /* DashboardController.swift */; };
+		0AF41CBF22E9743700EBFF76 /* NotesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF41CBD22E9743700EBFF76 /* NotesCollectionViewCell.swift */; };
+		0AF41CC022E9743700EBFF76 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF41CBE22E9743700EBFF76 /* CollectionViewCell.xib */; };
+		0AF41CC222E9ED9300EBFF76 /* KeyChainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF41CC122E9ED9300EBFF76 /* KeyChainHelper.swift */; };
+		0AF7121322FDB0AD00A09F8B /* PhotoToUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7121222FDB0AD00A09F8B /* PhotoToUrl.swift */; };
+		0AF7DE9522F8571C00013355 /* SearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7DE9422F8571C00013355 /* SearchBarExtension.swift */; };
+		0AF7DE9B22F8A47C00013355 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7DE9A22F8A47C00013355 /* SectionHeader.swift */; };
+		0AFB050D22E5BD87001CA547 /* DisplayNotesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB050C22E5BD87001CA547 /* DisplayNotesController.swift */; };
 		0F6780F8C3641620D0F847E9 /* Pods_FundooApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123FB9CD50447204E81A3486 /* Pods_FundooApplicationTests.framework */; };
 		ECFA067E684289B1E556D9F9 /* Pods_FundooApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F466B2727189F55B15A24ACD /* Pods_FundooApplication.framework */; };
 /* End PBXBuildFile section */
@@ -46,11 +64,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A0055C622D9B2D1003056F8 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		0A0055C822DA12F5003056F8 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
-		0A185A7E22DDF9B00072740A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		0A185A7F22DDF9B00072740A /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		0A0330F222EB10680058CF16 /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		0A15A4AD22EDAF8700AD65D5 /* HttpConnections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpConnections.swift; sourceTree = "<group>"; };
 		0A185A8222DDFC2E0072740A /* ExtensionFileForUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFileForUIView.swift; sourceTree = "<group>"; };
+		0A199F7623012B2B00E4C488 /* fundoNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fundoNotes.xcdatamodel; sourceTree = "<group>"; };
+		0A2D1BB822FC459B008EE19E /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		0A4A67EB22D623EB001FE8F0 /* SqliteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteController.swift; sourceTree = "<group>"; };
 		0A722AC622DC4D9F00E2F9B0 /* ButtonColorFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonColorFile.swift; sourceTree = "<group>"; };
 		0A825E3422D719D30068AC12 /* modeldata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modeldata.swift; sourceTree = "<group>"; };
@@ -61,11 +80,21 @@
 		0AAAC8EE22D4BE0D00D73439 /* FundooApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FundooApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAAC8F222D4BE0D00D73439 /* FundooApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundooApplicationTests.swift; sourceTree = "<group>"; };
 		0AAAC8F422D4BE0D00D73439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0ABB172822DB24990035D1F7 /* EditNavigationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNavigationCell.swift; sourceTree = "<group>"; };
+		0ABB172822DB24990035D1F7 /* TableEditNavigationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableEditNavigationCell.swift; sourceTree = "<group>"; };
 		0AC4506E22E1E3C900F6FFDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AC4507122E1E9DD00F6FFDC /* AddNotesApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesApiCall.swift; sourceTree = "<group>"; };
-		0AC4507322E1EE6200F6FFDC /* AddNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotes.swift; sourceTree = "<group>"; };
+		0AC4507322E1EE6200F6FFDC /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		0AD9508D22EC20DD005F4864 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		0AD9508F22EC2254005F4864 /* SideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
+		0AD9509322EC2431005F4864 /* MenuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
+		0AD9509522EC5582005F4864 /* UrlFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlFile.swift; sourceTree = "<group>"; };
 		0AE1318E22E090D4006BBF84 /* RestApiCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiCalls.swift; sourceTree = "<group>"; };
+		0AE5ACD422FAA29600574854 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		0AE5ACD722FACB3B00574854 /* NotesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDataSource.swift; sourceTree = "<group>"; };
+		0AE5ACD922FACD6A00574854 /* AnotherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherDataSource.swift; sourceTree = "<group>"; };
+		0AE5ACDF22FB115900574854 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0AE5ACE122FB37ED00574854 /* SignOutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutController.swift; sourceTree = "<group>"; };
+		0AE5ACE322FB3C6200574854 /* UserModelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelClass.swift; sourceTree = "<group>"; };
 		0AEEACF722E2E83300CC32C2 /* SlideViewTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewTableController.swift; sourceTree = "<group>"; };
 		0AEEACF922E2EF5100CC32C2 /* colorViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorViewCell.swift; sourceTree = "<group>"; };
 		0AF394DC22D5B6A20014ACAF /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -73,6 +102,13 @@
 		0AF394E022D5B8110014ACAF /* PreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
 		0AF394E222D5C54D0014ACAF /* validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = validation.swift; sourceTree = "<group>"; };
 		0AF394E422D5D00D0014ACAF /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
+		0AF41CBD22E9743700EBFF76 /* NotesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCollectionViewCell.swift; sourceTree = "<group>"; };
+		0AF41CBE22E9743700EBFF76 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		0AF41CC122E9ED9300EBFF76 /* KeyChainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainHelper.swift; sourceTree = "<group>"; };
+		0AF7121222FDB0AD00A09F8B /* PhotoToUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoToUrl.swift; sourceTree = "<group>"; };
+		0AF7DE9422F8571C00013355 /* SearchBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarExtension.swift; sourceTree = "<group>"; };
+		0AF7DE9A22F8A47C00013355 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		0AFB050C22E5BD87001CA547 /* DisplayNotesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNotesController.swift; sourceTree = "<group>"; };
 		123FB9CD50447204E81A3486 /* Pods_FundooApplicationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FundooApplicationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7E2010D55D718845FA6FB2 /* Pods-FundooApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundooApplication.debug.xcconfig"; path = "Target Support Files/Pods-FundooApplication/Pods-FundooApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		CA5B109DC13416E8DB953B53 /* Pods-FundooApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundooApplicationTests.debug.xcconfig"; path = "Target Support Files/Pods-FundooApplicationTests/Pods-FundooApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +137,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2D1BB222FC4015008EE19E /* CoreDataBase */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D1BB822FC459B008EE19E /* CoreDataHelper.swift */,
+			);
+			name = CoreDataBase;
+			sourceTree = "<group>";
+		};
 		0AAAC8D122D4BDFB00D73439 = {
 			isa = PBXGroup;
 			children = (
@@ -125,13 +169,16 @@
 			isa = PBXGroup;
 			children = (
 				0AAAC8F422D4BE0D00D73439 /* Info.plist */,
+				0AE5ACDF22FB115900574854 /* GoogleService-Info.plist */,
 				0AC4506E22E1E3C900F6FFDC /* Assets.xcassets */,
-				0AE1319322E1DB43006BBF84 /* RestApiCalls */,
 				0AE1319022E1A8A8006BBF84 /* Util */,
+				0A2D1BB222FC4015008EE19E /* CoreDataBase */,
+				0AE1319322E1DB43006BBF84 /* RestApiCalls */,
 				0AB3197D22DF02D000B7A1A2 /* SqLiteDataBase */,
 				0AF394EA22D5EDBD0014ACAF /* SupportingFile */,
 				0AB3197922DF020B00B7A1A2 /* LoginAndRegistration */,
 				0AF394E922D5ED720014ACAF /* Dashboard */,
+				0A199F7523012B2B00E4C488 /* FundooApplication.xcdatamodeld */,
 			);
 			path = FundooApplication;
 			sourceTree = "<group>";
@@ -157,7 +204,6 @@
 		0AB3197A22DF022E00B7A1A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0AF394E222D5C54D0014ACAF /* validation.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -168,6 +214,7 @@
 				0AF394E022D5B8110014ACAF /* PreviewController.swift */,
 				0AF394DC22D5B6A20014ACAF /* LoginController.swift */,
 				0AF394DE22D5B6C20014ACAF /* RegisterController.swift */,
+				0AE5ACE122FB37ED00574854 /* SignOutController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -176,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				0AAAC8E122D4BDFB00D73439 /* Main.storyboard */,
+				0AE5ACD422FAA29600574854 /* UserDefaultManager.swift */,
+				0AF394E222D5C54D0014ACAF /* validation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -195,7 +244,10 @@
 				0AF394E422D5D00D0014ACAF /* DashboardController.swift */,
 				0A0055C822DA12F5003056F8 /* EditViewController.swift */,
 				0AEEACF722E2E83300CC32C2 /* SlideViewTableController.swift */,
-				0AEEACF922E2EF5100CC32C2 /* colorViewCell.swift */,
+				0AFB050C22E5BD87001CA547 /* DisplayNotesController.swift */,
+				0AD9508F22EC2254005F4864 /* SideMenuController.swift */,
+				0AF7DE9A22F8A47C00013355 /* SectionHeader.swift */,
+				0AF7121222FDB0AD00A09F8B /* PhotoToUrl.swift */,
 			);
 			name = DashBoardController;
 			sourceTree = "<group>";
@@ -203,7 +255,8 @@
 		0AB3197F22DF035000B7A1A2 /* DashBoardModel */ = {
 			isa = PBXGroup;
 			children = (
-				0A185A7F22DDF9B00072740A /* CollectionViewCell.xib */,
+				0AD9509322EC2431005F4864 /* MenuHelper.swift */,
+				0A0330F222EB10680058CF16 /* CollectionViewFlowLayout.swift */,
 			);
 			name = DashBoardModel;
 			sourceTree = "<group>";
@@ -211,9 +264,11 @@
 		0AB3198022DF035500B7A1A2 /* DashBoardView */ = {
 			isa = PBXGroup;
 			children = (
-				0ABB172822DB24990035D1F7 /* EditNavigationCell.swift */,
-				0A0055C622D9B2D1003056F8 /* MenuTableViewCell.swift */,
-				0A185A7E22DDF9B00072740A /* CollectionViewCell.swift */,
+				0ABB172822DB24990035D1F7 /* TableEditNavigationCell.swift */,
+				0AEEACF922E2EF5100CC32C2 /* colorViewCell.swift */,
+				0AF41CBD22E9743700EBFF76 /* NotesCollectionViewCell.swift */,
+				0AD9508D22EC20DD005F4864 /* SideMenuCell.swift */,
+				0AF41CBE22E9743700EBFF76 /* CollectionViewCell.xib */,
 			);
 			name = DashBoardView;
 			sourceTree = "<group>";
@@ -221,8 +276,10 @@
 		0AC4507022E1E8FD00F6FFDC /* RestApiNotes */ = {
 			isa = PBXGroup;
 			children = (
+				0AC4507322E1EE6200F6FFDC /* NoteModel.swift */,
 				0AC4507122E1E9DD00F6FFDC /* AddNotesApiCall.swift */,
-				0AC4507322E1EE6200F6FFDC /* AddNotes.swift */,
+				0AD9509522EC5582005F4864 /* UrlFile.swift */,
+				0A15A4AD22EDAF8700AD65D5 /* HttpConnections.swift */,
 			);
 			path = RestApiNotes;
 			sourceTree = "<group>";
@@ -231,6 +288,9 @@
 			isa = PBXGroup;
 			children = (
 				0A185A8222DDFC2E0072740A /* ExtensionFileForUIView.swift */,
+				0AF41CC122E9ED9300EBFF76 /* KeyChainHelper.swift */,
+				0A722AC622DC4D9F00E2F9B0 /* ButtonColorFile.swift */,
+				0AF7DE9422F8571C00013355 /* SearchBarExtension.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -239,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				0AE1318E22E090D4006BBF84 /* RestApiCalls.swift */,
+				0AE5ACE322FB3C6200574854 /* UserModelClass.swift */,
 			);
 			name = LoginRestApi;
 			path = ..;
@@ -253,9 +314,19 @@
 			path = RestApiCalls;
 			sourceTree = "<group>";
 		};
+		0AE5ACD622FACB1100574854 /* Experiment */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5ACD722FACB3B00574854 /* NotesDataSource.swift */,
+				0AE5ACD922FACD6A00574854 /* AnotherDataSource.swift */,
+			);
+			name = Experiment;
+			sourceTree = "<group>";
+		};
 		0AF394E922D5ED720014ACAF /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				0AE5ACD622FACB1100574854 /* Experiment */,
 				0AB3198022DF035500B7A1A2 /* DashBoardView */,
 				0AB3197F22DF035000B7A1A2 /* DashBoardModel */,
 				0AB3197E22DF034A00B7A1A2 /* DashBoardController */,
@@ -267,7 +338,6 @@
 			isa = PBXGroup;
 			children = (
 				0AAAC8E622D4BE0D00D73439 /* LaunchScreen.storyboard */,
-				0A722AC622DC4D9F00E2F9B0 /* ButtonColorFile.swift */,
 				0AAAC8DD22D4BDFB00D73439 /* AppDelegate.swift */,
 			);
 			name = SupportingFile;
@@ -378,8 +448,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AAAC8E822D4BE0D00D73439 /* LaunchScreen.storyboard in Resources */,
-				0A185A8122DDF9B00072740A /* CollectionViewCell.xib in Resources */,
 				0AAAC8E322D4BDFB00D73439 /* Main.storyboard in Resources */,
+				0AE5ACE022FB115900574854 /* GoogleService-Info.plist in Resources */,
+				0AF41CC022E9743700EBFF76 /* CollectionViewCell.xib in Resources */,
 				0AC4506F22E1E3C900F6FFDC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,23 +535,40 @@
 			files = (
 				0AF394E122D5B8110014ACAF /* PreviewController.swift in Sources */,
 				0A722AC722DC4D9F00E2F9B0 /* ButtonColorFile.swift in Sources */,
+				0AF7121322FDB0AD00A09F8B /* PhotoToUrl.swift in Sources */,
+				0AD9509622EC5582005F4864 /* UrlFile.swift in Sources */,
 				0AAAC8DE22D4BDFB00D73439 /* AppDelegate.swift in Sources */,
 				0A825E3522D719D30068AC12 /* modeldata.swift in Sources */,
 				0A185A8322DDFC2E0072740A /* ExtensionFileForUIView.swift in Sources */,
+				0A2D1BB922FC459B008EE19E /* CoreDataHelper.swift in Sources */,
+				0AF41CBF22E9743700EBFF76 /* NotesCollectionViewCell.swift in Sources */,
 				0AEEACF822E2E83300CC32C2 /* SlideViewTableController.swift in Sources */,
+				0A15A4AE22EDAF8700AD65D5 /* HttpConnections.swift in Sources */,
+				0AFB050D22E5BD87001CA547 /* DisplayNotesController.swift in Sources */,
+				0AD9509422EC2431005F4864 /* MenuHelper.swift in Sources */,
 				0AF394DD22D5B6A20014ACAF /* LoginController.swift in Sources */,
+				0A199F7723012B2B00E4C488 /* FundooApplication.xcdatamodeld in Sources */,
 				0AE1318F22E090D4006BBF84 /* RestApiCalls.swift in Sources */,
+				0AD9509022EC2254005F4864 /* SideMenuController.swift in Sources */,
+				0AE5ACDA22FACD6A00574854 /* AnotherDataSource.swift in Sources */,
 				0AF394E322D5C54D0014ACAF /* validation.swift in Sources */,
 				0AC4507222E1E9DD00F6FFDC /* AddNotesApiCall.swift in Sources */,
-				0ABB172922DB24990035D1F7 /* EditNavigationCell.swift in Sources */,
-				0AC4507422E1EE6200F6FFDC /* AddNotes.swift in Sources */,
+				0AE5ACD822FACB3B00574854 /* NotesDataSource.swift in Sources */,
+				0AF41CC222E9ED9300EBFF76 /* KeyChainHelper.swift in Sources */,
+				0AE5ACE422FB3C6200574854 /* UserModelClass.swift in Sources */,
+				0ABB172922DB24990035D1F7 /* TableEditNavigationCell.swift in Sources */,
+				0AC4507422E1EE6200F6FFDC /* NoteModel.swift in Sources */,
+				0AE5ACE222FB37ED00574854 /* SignOutController.swift in Sources */,
 				0AF394E522D5D00D0014ACAF /* DashboardController.swift in Sources */,
-				0A185A8022DDF9B00072740A /* CollectionViewCell.swift in Sources */,
 				0A0055C922DA12F5003056F8 /* EditViewController.swift in Sources */,
 				0AF394DF22D5B6C20014ACAF /* RegisterController.swift in Sources */,
+				0AD9508E22EC20DD005F4864 /* SideMenuCell.swift in Sources */,
+				0AF7DE9522F8571C00013355 /* SearchBarExtension.swift in Sources */,
+				0AE5ACD522FAA29600574854 /* UserDefaultManager.swift in Sources */,
+				0AF7DE9B22F8A47C00013355 /* SectionHeader.swift in Sources */,
 				0A4A67EC22D623EB001FE8F0 /* SqliteController.swift in Sources */,
 				0AEEACFA22E2EF5100CC32C2 /* colorViewCell.swift in Sources */,
-				0A0055C722D9B2D1003056F8 /* MenuTableViewCell.swift in Sources */,
+				0A0330F322EB10680058CF16 /* CollectionViewFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,7 +733,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4X6PRU862H;
 				INFOPLIST_FILE = FundooApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -665,7 +753,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4X6PRU862H;
 				INFOPLIST_FILE = FundooApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -753,6 +841,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0A199F7523012B2B00E4C488 /* FundooApplication.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0A199F7623012B2B00E4C488 /* fundoNotes.xcdatamodel */,
+			);
+			currentVersion = 0A199F7623012B2B00E4C488 /* fundoNotes.xcdatamodel */;
+			name = FundooApplication.xcdatamodeld;
+			path = ../../../FundooApplication.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0AAAC8D222D4BDFB00D73439 /* Project object */;
 }
